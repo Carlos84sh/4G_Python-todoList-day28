@@ -17,7 +17,7 @@ def get_todos():
 
 @app.route('/todos', methods=['POST'])
 def add_new_todo():
-    request_body = request.data
+    request_body = request.data # data cuerpo de la peticion
     decoded_object= json.loads(request_body)
     todos.append(decoded_object)
     return jsonify(todos)
